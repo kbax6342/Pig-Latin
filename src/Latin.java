@@ -14,20 +14,22 @@ public class Latin {
 		String add = "way";
 		String secondAdd = "ay";
 		
+		StringBuffer strBuff = new StringBuffer();
+		
 		System.out.println("Welcome to the Pig Latin Translator!");
 		
 		
 		System.out.println("Enter a line to be translated:  ");
-		sentence = input.nextLine();
-		sentence.toLowerCase();
+		strBuff.append(input.nextLine());
+		//String[] splitArray = input.split("\\s+");
 		
-		if(sentence.startsWith("a" + "A" + "e" + "E" + "i" + "I" + "o" + "O" + "u" +"U")){
-			sentence.concat(add);
-			}else{
-				
+		
+		for (int i = 0; i < strBuff.length(); i++) {
+			   char c = strBuff.charAt(i);
+			   strBuff.setCharAt(i, Character.toLowerCase(c));
 			}
 		
-		System.out.println(sentence);
+		System.out.println(strBuff);
 		
 
 	}
