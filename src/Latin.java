@@ -8,30 +8,32 @@ public class Latin {
 		//The application translates the text to Pig Latin and displays it on the console
 		//The application asks the user if he or she wants to translate another word
 		
+		
+		//Importing classes 
 		Scanner input = new Scanner (System.in);
-		
-		String sentence;
-		String add = "way";
-		String secondAdd = "ay";
-		
 		StringBuffer strBuff = new StringBuffer();
 		
-		System.out.println("Welcome to the Pig Latin Translator!");
+		//Variables Needed to make additions to String
+		String add = "way";
+		String secondAdd = "ay";
+		String data;
 		
-		
-		System.out.println("Enter a line to be translated:  ");
-		strBuff.append(input.nextLine());
-		//String[] splitArray = input.split("\\s+");
-		
-		
-		for (int i = 0; i < strBuff.length(); i++) {
-			   char c = strBuff.charAt(i);
-			   strBuff.setCharAt(i, Character.toLowerCase(c));
-			}
-		
-		System.out.println(strBuff);
 		
 
+		//Saying Welcome to the user
+		System.out.println("Welcome to the Pig Latin Translator!");
+		
+		//Asking the user to put in a line to be translated
+		System.out.println("Enter a line to be translated:  ");
+		strBuff.append(input.nextLine());
+		
+		 StringBuffer finalSentence = methods.lowerCase(strBuff);
+		
+		
+		
+		System.out.println(finalSentence);
 	}
+
+
 
 }
